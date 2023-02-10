@@ -1,10 +1,30 @@
 
 <p>Listado de Heores</p>
 
+<!--Se le indica que realice la primera acción si no está vacío, pero en caso de estarlo muestre el template identificado luego del else-->
+<div *ngIf="tempHero; else noDelete">
+
+  <h3>Erased Hero: <small>{{tempHero}}</small> </h3>
+
+</div>
+
+<!--Las referencias locales se identifican con el #-->
+<ng-template #noDelete>
+
+  <h3>Nothing has been deleted </h3>
+
+</ng-template>
+
+<button (click)="deleteHero()">
+  Delete
+</button>
+
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
-  <li>Item 5</li>
+<!--  //let heroe es la variable creada y heores el arreglo-->
+  <li *ngFor="let heroe of heroes; let i = index">
+      {{ i + 1 }} - {{heroe}}
+  </li>
+
 </ul>
+
+
