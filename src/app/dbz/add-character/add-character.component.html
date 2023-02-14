@@ -1,0 +1,36 @@
+<h1>Agregar <small>{{characterInputBox.name}}</small></h1>
+<hr>
+
+<!--Se indica que el evento submint ejecuta el método entre comillas para procesar el formulario-->
+<!--add debe existir dentro de la clase ts del componente-->
+<!--$event indica que deseo recibir todo el evento del formuladorio-->
+
+<!--    <form (submit)="add($event)">-->
+<form (ngSubmit)="add()">
+  <!--      Bloque para agregar texto de entrada-->
+  <!--        las llaves cuadradas sirven para establecer alguna propiedad del objeto input-->
+  <!--      los paréntesis indican un evento (input)="changeName($event)"-->
+  <input
+
+    type=text
+    placeholder="Name"
+    name="name"
+    [(ngModel)]="characterInputBox.name"
+
+  />
+
+  <input
+
+    type=number
+    placeholder="Power"
+    name="power"
+    [(ngModel)]="characterInputBox.power"
+
+  />
+
+  <!--Por buena practica se indica que el boton no es quien dispara todo, sino el formulario-->
+  <button type="submit">
+    Add
+  </button>
+
+</form>

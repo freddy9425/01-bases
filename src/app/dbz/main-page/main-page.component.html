@@ -1,0 +1,20 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+
+  <div class="col">
+    <!--Las llaves cuadradas asocian a una propiedad de la clase hijo, en este caso del characters.component.ts con una de la clase padre main-page.componente.ts
+     cuyo nombre  es el que está entre comillas-->
+<!--    <app-characters [characters]="characters"></app-characters>-->
+    <app-characters></app-characters>
+  </div>
+
+  <div class="col">
+<!--    <app-add-character-->
+<!--      [characterInputBox]="characterInputBox"-->
+<!--      (onNewCharacter)="addNewCharacter($event)"-->
+<!--    ></app-add-character>-->
+    <app-add-character [characterInputBox]="characterInputBox"></app-add-character>
+  </div>
+</div>
